@@ -30,5 +30,20 @@
 //
 // Дана строка. Выведите в консоль последний символ строки.
 
-const str = prompt("Выведи строку ввиде имени")
-console.log(str[str.length - 1])
+// const str = prompt("Выведи строку ввиде имени")
+// console.log(str[str.length - 1])
+
+// №4
+//
+// Дано число. Проверьте, четное оно или нет.
+function number(n) {
+    if (n % 2 === 0) {
+        console.log(true)
+    }else if(n % 2 === 1) {
+        console.log(false)
+    }else {
+        console.log(n + ' это не число')
+    }
+}
+const num = prompt('Введи число')
+number(num)
