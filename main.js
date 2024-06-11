@@ -17,11 +17,18 @@
 // №2
 //
 // Дана строка. Выведите в консоль длину этой строки.
-function string(str) {
+// function string(str) {
+//
+//     const strech2 = str.length -1
+//     console.log(strech2)
+//
+// }
+// const strech = prompt('Выведи строку ввиде имени');
+// string(strech)
 
-    const strech2 = str.length -1
-    console.log(strech2)
+// №3
+//
+// Дана строка. Выведите в консоль последний символ строки.
 
-}
-const strech = prompt('Выведи строку ввиде имени');
-string(strech)
+const str = prompt("Выведи строку ввиде имени")
+console.log(str[str.length - 1])
