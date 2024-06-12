@@ -56,8 +56,8 @@
 // let world = 'Птица';
 // let world2 = 'Потница';
 //
-// let pti = world.substring(0,1).toUpperCase();
-// let potn = world2.substring(0,1).toUpperCase();
+// let pti = world.at(0).toUpperCase();
+// let potn = world2.at(0).toUpperCase();
 // console.log(pti);
 //
 // if (pti === potn) {
@@ -67,7 +67,22 @@
 // }
 
 
+// №6
+//
+// Дано слово. Получите его последнюю букву. Если слово заканчивается на мягкий знак, то получите предпоследнюю букву
+//
+function world(aby) {
+    let ab = aby.toLowerCase().slice(-1);
+    let ag = aby.toLowerCase().charAt(aby.length -2);
+    console.log(ab);
 
+   if (ab === "ь") {
+       return ag;
+   }
+       return ab;
+
+}
+console.log(world('мукаrudejль'))
 
 
 
