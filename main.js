@@ -36,14 +36,59 @@
 // №4
 //
 // Дано число. Проверьте, четное оно или нет.
-function number(n) {
-    if (n % 2 === 0) {
-        console.log(true)
-    }else if(n % 2 === 1) {
-        console.log(false)
-    }else {
-        console.log(n + ' это не число')
-    }
-}
-const num = prompt('Введи число')
-number(num)
+// function number(n) {
+//     if (n % 2 === 0) {
+//         console.log(true)
+//     }else if(n % 2 === 1) {
+//         console.log(false)
+//     }else {
+//         console.log(n + ' это не число')
+//     }
+// }
+// const num = prompt('Введи число')
+// number(num)
+
+
+
+// №5
+//
+// Даны два слова. Проверьте, что первые буквы этих слов совпадают.
+// let world = 'Птица';
+// let world2 = 'Потница';
+//
+// let pti = world.substring(0,1).toUpperCase();
+// let potn = world2.substring(0,1).toUpperCase();
+// console.log(pti);
+//
+// if (pti === potn) {
+//     console.log(true)
+// }else{
+//     console.log(false)
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
