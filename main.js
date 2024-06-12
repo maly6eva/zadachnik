@@ -93,31 +93,36 @@
 
 
 
-const printReversedWordBySymbol = (word) => {
-    let i = word.length - 1;
-    let i2 = word.length - 2;
-    while (i >= 0) {
-        console.log(word[i]);
-        i = i - 1;
-// let a = word.at();
-// console.log(a)
-         if (word === "ь") {
-            return i;
-         }{
-             return i2;
-        }
-    }
-};
-
-const worldik = "ликаь"
-printReversedWordBySymbol(worldik);
-
-
+// const printReversedWordBySymbol = (word) => {
+//     let i = word.length - 1;
+//     let i2 = word.length - 2;
+//     while (i >= 0) {
+//         console.log(word[i]);
+//         i = i - 1;
+// // let a = word.at();
+// // console.log(a)
+//          if (word === "ь") {
+//             return i;
+//          }{
+//              return i2;
+//         }
+//     }
+// };
+//
+// const worldik = "ликаь"
+// printReversedWordBySymbol(worldik);
 
 
 
 
 
+//
+// №1
+//
+// Дано число. Выведите в консоль первую цифру этого числа.
+
+// let a = "Barsik"
+// console.log(a.at(0).toLowerCase())
 
 
 
