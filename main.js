@@ -71,18 +71,18 @@
 //
 // Дано слово. Получите его последнюю букву. Если слово заканчивается на мягкий знак, то получите предпоследнюю букву
 
-
-function world(w) {
-
-    let a = w[w.length -1]
-
-    if( a === "ь" ) {
-        return world(w.slice(0, w.length - 1));
-
-    }
-    return a;
-}
-console.log(world("морковьтьььь"))
+//
+// function world(w) {
+//
+//     let a = w[w.length -1]
+//
+//     if( a === "ь" ) {
+//         return world(w.slice(0, w.length - 1));
+//
+//     }
+//     return a;
+// }
+// console.log(world("морковьтьььь"))
 
 
 
@@ -117,3 +117,10 @@ console.log(world("морковьтьььь"))
 // №3
 //
 // Дано число. Выведите в консоль сумму первой и последней цифры этого числа.
+function number(num) {
+    num = "" + num
+    return +num[0] + (+num[num.length - 1]);
+
+}
+
+console.log(number(23));
