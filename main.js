@@ -70,47 +70,26 @@
 // №6
 //
 // Дано слово. Получите его последнюю букву. Если слово заканчивается на мягкий знак, то получите предпоследнюю букву
-// //
-// function world(aby) {
-//     let ab = aby.toLowerCase().slice(-1);
-//     let ag = aby.toLowerCase().charAt(aby.length -2);
-//     console.log(ag);
-//
-//    if (ab === "ь") {
-//        return ag;
-//    }
-//        return ab;
-//
-// }
-// console.log(world('мукаrudejль'))
+
+
+function world(w) {
+
+    let a = w[w.length -1]
+
+    if( a === "ь" ) {
+        return world(w.slice(0, w.length - 1));
+
+    }
+    return a;
+}
+console.log(world("морковьтьььь"))
 
 
 
 
-
+// if(t !== "ь") return
 // мукаrudejлььь => мукаrudejльь => мукаrudejль => мукаrudejл => л
 
-
-
-
-// const printReversedWordBySymbol = (word) => {
-//     let i = word.length - 1;
-//     let i2 = word.length - 2;
-//     while (i >= 0) {
-//         console.log(word[i]);
-//         i = i - 1;
-// // let a = word.at();
-// // console.log(a)
-//          if (word === "ь") {
-//             return i;
-//          }{
-//              return i2;
-//         }
-//     }
-// };
-//
-// const worldik = "ликаь"
-// printReversedWordBySymbol(worldik);
 
 
 
