@@ -8,11 +8,21 @@
 // }
 //
 // console.log(number(23));
-let num = 267897989893;
+// let num = 26789798989;
 
-let num2 = num.toString().split("")
-let num3 = num2[7];
-let num4 = num2[0];
+// let num2 = num.toString().split("")
+// let num3 = num2[2];
+// let num4 = num2[0];
+//
+// let resalt = +num3 + +num4;
+// console.log(resalt)
 
-let resalt = +num3 + +num4;
-console.log(resalt)
+let num = 23;
+let num2 = num.at(0).toUpperCase();
+console.log(num2);
+
+
+// let num3 = num.toUpperCase().at(num.length - 1);
+//
+// let resalt = num3 + num2;
+// console.log(resalt)
