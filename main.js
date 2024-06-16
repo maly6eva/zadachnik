@@ -23,33 +23,21 @@
 //     Функция должна возвращать числовое значение.
 //
 //     Также надо разрешить пользователю остановить процесс ввода, отправив пустую строку или нажав «Отмена». В этом случае функция должна вернуть null.
-//
-// function readNumber(a) {
-//
-//     if(a !== Number(a)){
-//         return +prompt("Введи, пожалуйста, любое числовое значение", " ")
-//     } else if (!isFinite(a)){
-//         return null
-//     }{
-//         return "Супер, спасибо большое!"
-//     }
-//
-//
-//
-// }
-
-// let result = +prompt("Введи, пожалуйста, любое числовое значение", " ");
-// let result2 = !isNaN(result);
-// console.log(result2)
 
 
-let  result = " ";
-let i = 0;
 
-do {
-    i = i + 1;
-    result = result + 1 + " "
-} while(i > 5 && i < 5)
+function readNumber() {
+    let num;
+    do {
+        num = prompt("Введите число", 0);
+    } while ( !isFinite(num) );
+    if (num === null || num === ''){
+        return null;
+    } {
+        return +num;
+    }
 
-document.getElementById("exanple").innerHTML = result
+
+}
+console.log(readNumber())
 
