@@ -5,6 +5,8 @@ function string(str) {
     if(str.length > 1) {
         return str[str.length - 2];
     }
+    return null;
+
 
 }
 
