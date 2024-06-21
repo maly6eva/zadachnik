@@ -6,12 +6,16 @@
 // console.log(Math.trunc(1, 100));
 // Expected output: 13
 
+//
+//
+// let alin = []
+//
+// alin[0]= prompt('Как тебя зовут?', '')
+// alin[1]= prompt('Каая твоя фамилия', '')
+// alin[2]= prompt('Cколько тебе лет', '')
+//
+// document.write(alin)
 
-
-let alin = []
-
-alin[0]= prompt('Как тебя зовут?', '')
-alin[1]= prompt('Каая твоя фамилия', '')
-alin[2]= prompt('Cколько тебе лет', '')
-
-document.write(alin)
+for(let i = -100; i <=0; i++){
+    console.log(i);
+}
