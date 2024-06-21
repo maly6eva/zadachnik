@@ -7,11 +7,16 @@
 // Expected output: 13
 
 
+//
+// let alin = []
+//
+// alin[0]= prompt('Как тебя зовут?', '')
+// alin[1]= prompt('Каая твоя фамилия', '')
+// alin[2]= prompt('Cколько тебе лет', '')
+//
+// document.write(alin)
 
-let alin = []
 
-alin[0]= prompt('Как тебя зовут?', '')
-alin[1]= prompt('Каая твоя фамилия', '')
-alin[2]= prompt('Cколько тебе лет', '')
-
-document.write(alin)
+for(let i = 1; i <=100; i++) {
+    console.log(i)
+}
