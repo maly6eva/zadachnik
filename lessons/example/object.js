@@ -24,6 +24,7 @@ console.log(Object.keys(option).length)
 for(let key in option) {
     console.log(`Cвойство ${key} и значение ${option[key]}`)
 }
+
 let counter = 0;
 for (let key in option) {
     if (typeof (option[key]) === 'object') {
