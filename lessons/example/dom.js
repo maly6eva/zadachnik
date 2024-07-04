@@ -15,3 +15,7 @@ hearts.forEach(item => {
 
 const oneHeart = document.querySelector('.heart')//вернется самый первый элемент и все
 console.log(oneHeart);
+
+
+
+box.style.backgroundColor = 'blue';
