@@ -1,13 +1,18 @@
 'use strict';
 
-const box = document.querySelector('.box');
+// const box = document.querySelector('.box')
+//
+// const newHeight = 0
+// const newWidth = 400
+//
+// function chengeParam(elem, h, w) {
+//     elem.style.height =`${h ?? 200}px`;
+//     elem.style.width = `${w ?? 200}px`;
+//     elem.innerHTML = (h ?? 200) * (w ?? 200);
+// }
 
-const newHeight = 100;
-const newWidth = 400;
+// chengeParam(box, newHeight, newWidth)
 
-function changeParams(elem, h, w) {
-    elem.style.height = `${h}px`;
-    elem.style.width = `${w}px`;
-}
+// let userName = NaN
+// console.log(userName ?? 'User')
 
-changeParams(box, newHeight, newWidth);
