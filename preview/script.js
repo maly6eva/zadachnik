@@ -16,3 +16,18 @@
 // let userName = NaN
 // console.log(userName ?? 'User')
 
+
+
+//contenteditable
+
+// const box = document.querySelector('.box');
+//
+// let a = new MutationObserver(mutationRecords => {
+//     console.log(mutationRecords);
+// } );
+//
+// a.observe(box, {
+//     childList: true
+// })
+//
+// a.disconnect()

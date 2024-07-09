@@ -45,18 +45,18 @@ window.addEventListener('DOMContentLoaded', () => {
     function getTimeRem(end) {
         let days, hours, mins, sec;
         const t = Date.parse(end) - Date.parse(new Date());
-            if (t <= 0) {
-                days = 0;
-                hours = 0;
-                mins = 0;
-                sec = 0;
-        }else{
-                days = Math.floor(t / (1000 * 60 * 60 * 24)),
-                    hours = Math.floor((t / 1000 * 60 * 60) % 24),
-                    mins = Math.floor((t / 1000 / 60) % 60),
-                    sec = Math.floor((t / 1000) % 60);
+        if (t <= 0) {
+            days = 0;
+            hours = 0;
+            mins = 0;
+            sec = 0;
+        } else {
+            days = Math.floor(t / (1000 * 60 * 60 * 24)),
+                hours = Math.floor((t / 1000 * 60 * 60) % 24),
+                mins = Math.floor((t / 1000 / 60) % 60),
+                sec = Math.floor((t / 1000) % 60);
 
-            }
+        }
 
         return {
             'total': t,
@@ -67,10 +67,11 @@ window.addEventListener('DOMContentLoaded', () => {
         };
 
     }
+
     function getZero(num) {
-        if(num >= 0 && num < 10) {
+        if (num >= 0 && num < 10) {
             return `0${num};`
-        }else {
+        } else {
             return num
         }
     }
@@ -79,7 +80,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const timer = document.querySelector(selector);
         const days = timer.querySelector('#days');
         const hours = timer.querySelector('#hours');
-        const  mins = timer.querySelector('#mins');
+        const mins = timer.querySelector('#mins');
         const sec = timer.querySelector('#sec')
         const timeInterval = setInterval(updateClock, 1000);
         updateClock();
@@ -98,42 +99,64 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+
     setClock('.timer', deadlane);
 
 
     //Modal
 
-    const modalTrigger = document.querySelectorAll ('[ data-modal]'),
-    modal = document.querySelector('.modal'),
-    modalCloseBtn = document.querySelector('[data-close]');
+    const modalTrigger = document.querySelectorAll('[ data-modal]'),
+        modal = document.querySelector('.modal'),
+        modalCloseBtn = document.querySelector('[data-close]');
+
+    function openModal() {
+        modal.classList.add('show');
+        modal.classList.remove('hide');
+        // modal.classList.toggle('show');
+        document.body.style.overflow = 'hidden';
+        clearInterval(modalTimerId)
+
+    }
 
     modalTrigger.forEach(btn => {
         btn.addEventListener('click', () => {
-            modal.classList.add('show');
-            modal.classList.remove('hide');
-            // modal.classList.toggle('show');
-            document.body.style.overflow = 'hidden'
+
         });
     })
 
-function closeModal() {
-    modal.classList.add('hide');
-    modal.classList.remove('show');
-    // modal.classList.toggle('show');
-    document.body.style.overflow = ''
-}
+
+    function closeModal() {
+        modal.classList.add('hide');
+        modal.classList.remove('show');
+        // modal.classList.toggle('show');
+        document.body.style.overflow = ''
+    }
 
     modalCloseBtn.addEventListener('click', closeModal);
 
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
-           closeModal();
+            closeModal();
         }
     })
 
     document.addEventListener('keydown', (e) => {
-        if(e.code === 'Escape' && modal.classList.contains('show')) {
+        if (e.code === 'Escape' && modal.classList.contains('show')) {
             closeModal();
         }
     })
+
+    const modalTimerId = setTimeout(openModal, 3000);
+
+
+    function showModallByScroll() {
+        if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+            openModal();
+            window.removeEventListener('scroll', showModallByScroll)
+        }
+    }
+
+    window.addEventListener('scroll', showModallByScroll)
+
+
 });
