@@ -49,28 +49,30 @@
 //     id = setTimeout(log, 500);
 // }, 500);
 
-const btn = document.querySelector('.btn');
-let time,
-    i = 0;
+// const btn = document.querySelector('.btn');
+// let time,
+//     i = 0;
+//
+//
+//
+// const id = setInterval(f, 10);
+// function myAnimation() {
+//     const el = document.querySelector('.box');
+//     let pos = 0;
+//
+//     function f() {
+//         if(pos === 300) {
+//             clearInterval(id);
+//         }else{
+//             pos++;
+//             el.style.display.top = pos + 'px'
+//             el.style.display.top = pos + 'px'
+//         }
+//     }
+// }
+// btn.addEventListener("click", myAnimation);
+//
 
-
-
-const id = setInterval(f, 10);
-function myAnimation() {
-    const el = document.querySelector('.box');
-    let pos = 0;
-
-    function f() {
-        if(pos === 300) {
-            clearInterval(id);
-        }else{
-            pos++;
-            el.style.display.top = pos + 'px'
-            el.style.display.top = pos + 'px'
-        }
-    }
-}
-btn.addEventListener("click", myAnimation);
 
 
 
