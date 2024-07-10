@@ -34,26 +34,26 @@
 // console.log(document.documentElement.scrollTop)
 
 
-const btn = document.querySelector('button')
-
-btn.addEventListener('click', (e) => {
-   e.target.style.background = "red"
-});
-
-const obj = {
-    num: 5,
-    sayNum: function(){
-        const say = () => {
-            console.log((this.num))
-        };
-        say();
-    }
-
-}
-obj.sayNum();
-
-
-const double = (a) => {
-    return a * 2;
-};
-console.log(double(4))
+// const btn = document.querySelector('button')
+//
+// btn.addEventListener('click', (e) => {
+//    e.target.style.background = "red"
+// });
+//
+// const obj = {
+//     num: 5,
+//     sayNum: function(){
+//         const say = () => {
+//             console.log((this.num))
+//         };
+//         say();
+//     }
+//
+// }
+// obj.sayNum();
+//
+//
+// const double = (a) => {
+//     return a * 2;
+// };
+// console.log(double(4))
