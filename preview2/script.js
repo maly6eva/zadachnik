@@ -57,3 +57,43 @@
 //     return a * 2;
 // };
 // console.log(double(4))
+
+
+//...rest - складвает в массив
+// ...spread - извлекает из массива
+
+const log = function(a, b, ...spread) {
+    console.log(a, b, spread);
+}
+log('fsd', 'efs', 'ef', 'ef', 'ef', 'ef', 'ef', 'ef', 'ef', 'ef');
+
+
+
+function calcor(n, b = 3) {
+
+    console.log(n * b)
+}
+
+calcor(3)
+
+
+
+
+
+//
+// let arr = [3, 5, 1];
+//
+// console.log( Math.max(...arr) )
+//
+
+
+
+
+
+
+
+
+
+
+
+
