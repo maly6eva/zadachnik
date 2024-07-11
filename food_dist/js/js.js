@@ -212,9 +212,61 @@ new MenuCard(
     'big'
 ).render();
 
+//Forms
 
+
+    const forms = document.querySelectorAll('form');
+
+    function postData(form) {
+        form.addEventListener('submit', (e) => {
+            const request = new XMLHttpRequest();
+            request.open('POST', 'server.php')
+
+            request.setRequestHeader('Accept', 'application/json')
+            const formData = new FormData(request)
+        })
+    }
+    function showNhanksModal() {
+        const prevModalDi = document.querySelector('.modal__dialog')
+        prevModalDi.classList.add('hide')
+        openModal()
+
+        const thancsMod = document.createElement('div')
+        thancsMod.classList.add('modal__dialog')
+        thancsMod.ihherHTML = `
+        <div class="modal__content">`
+
+
+    }
+})
+//Промисы - "обещания" если произойдет что-то то мы выполним какое-то действие
+
+console.log('Запрос данных...')
+
+const req = new Promise(function(resolve, reject) {
+    setTimeout(() => {
+        console.log('Подготовка')
+
+        const product = {
+            name: 'TV',
+            price: 2000
+        };
+        resolve()
+    }, 2000);
+});
+req.then(()=> {
+    console.log((`Данные получены`))
 })
 
+        setTimeout(() => {
+            product.stasus='order';
+            console.log(product)
+
+    }, 2000)
+})
+
+//resolfe-обещание выполнилось
+    //reject -что-то не так
 
 
 
