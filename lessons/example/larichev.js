@@ -122,34 +122,42 @@
 
 
 //Создание функции Fetch
+//
+// function myFetch(url) {
+//     return new Promise ((resolve, reject) => {
+//         const request = new XMLHttpRequest()
+//         request.open("GET", url)
+//         request.send();
+//
+//         request.addEventListener('load', function() {
+//             if(this.status > 400) {
+//                 reject(new Error(this.status))
+//             }
+//             resolve(this.responseText);
+//         })
+//         request.addEventListener('error', function() {
+//             reject(new Error(this.status))
+//         })
+//         request.addEventListener('timeout', function() {
+//             reject(new Error('Timeout'))
+//         })
+//     })
+// }
+// myFetch('https://jsonplaceholder.typicode.com/posts')
+//     .then(data => console.log(data))
+//     .catch(err => console.error(err))
 
-function myFetch(url) {
-    return new Promise ((resolve, reject) => {
-        const request = new XMLHttpRequest()
-        request.open("GET", url)
-        request.send();
 
-        request.addEventListener('load', function() {
-            if(this.status > 400) {
-                reject(new Error(this.status))
-            }
-            resolve(this.responseText);
-        })
-        request.addEventListener('error', function() {
-            reject(new Error(this.status))
-        })
-        request.addEventListener('timeout', function() {
-            reject(new Error('Timeout'))
-        })
-    })
+
+async function getProducts() {
+    fetch('https://api.larichev.com/products')
+        .then(response => response.json())
+        .then(data => console.log(data))
+    const res = await fetch("https://api.larichev.com/products");
 }
-myFetch('https://jsonplaceholder.typicode.com/posts')
-    .then(data => console.log(data))
-    .catch(err => console.error(err))
 
-
-
-
+getProducts();
+console.log('End')
 
 
 
